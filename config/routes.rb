@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  root to: "photos#index"
+  devise_for :users
 
-  resources :photos
+  root :to => 'landing#index'
+
+  resources :users do
+    resources :photos
+  end
+
 end
