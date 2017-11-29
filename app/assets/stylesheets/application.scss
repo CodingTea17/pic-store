@@ -1,0 +1,18 @@
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Rubik:900');
+
+.navbar-brand {
+  font-family: 'Rubik', sans-serif;
+  font-size: 45px;
+  padding: 0;
+}
+
+.bg-dark {
+    background-color: rgba(69,206,162,.6) !important;
+}
+
+body {
+  background: url('http://d5qsyj6vaeh11.cloudfront.net/images/campaigns/great-belfast/collage-explore-belfast-northern-ireland.jpg') no-repeat center center fixed;
+  height: 100%;
+  width: 100%;
+}

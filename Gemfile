@@ -24,6 +24,8 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use Boostrap to stlye the site
 gem 'bootstrap'
+# Use jquery-rails
+gem 'jquery-rails'
 # Use Devise to manage authentication
 gem 'devise'
 # Use Paperclip to manage file uploading
