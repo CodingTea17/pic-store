@@ -1,12 +1,19 @@
-<div class="page-header"><h1>Upload Photo</h1></div>
-
-<div class="media">
-  <% @photos.each do |photo| %>
-    <div class="media-left">
-      <%= link_to image_tag(photo.image.url, class: 'media-object'), photo.image.url, target: '_blank' %>
+<div class="row justify-content-center">
+  <div class="col-9">
+    <div class="card card-body">
+        <% if @photos.any? %>
+            <h1>Your Photos</h1>
+          <% @photos.each do |photo| %>
+            <div class="media-left">
+              <%= link_to image_tag(photo.image.url, class: 'media-object user-photo'), photo.image.url, target: '_blank' %>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><%= photo.title %></h4>
+            </div>
+          <% end %>
+        <% else %>
+          <h3>No Photos Yet! Upload your first image <%= link_to "now", new_user_photo_path %>!</h3>
+        <% end %>
     </div>
-    <div class="media-body">
-      <h4 class="media-heading"><%= photo.title %></h4>
-    </div>
-  <% end %>
+  </div>
 </div>

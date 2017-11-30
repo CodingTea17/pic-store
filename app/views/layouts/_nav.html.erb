@@ -9,7 +9,7 @@
           <ul class="navbar-nav mr-auto">
             <% if user_signed_in? %>
               <li class="nav-item">
-                <%= link_to "My Photos", user_photos_path(current_user), :class => "nav-link" %>
+                <%= link_to "My Photos", user_photos_path(current_user), :class => "nav-link text-white link-text" %>
               </li>
             <% end %>
           </ul>
@@ -18,7 +18,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <% if user_signed_in? %>
-              <%= link_to "Logout, #{current_user.email}", destroy_user_session_path, method: :delete, :class => "nav-link"%>
+              <%= link_to "Logout, #{current_user.email}", destroy_user_session_path, method: :delete, :class => "btn text-white nav-link text-light link-text"%>
             <% else %>
               <%= link_to "Login", new_user_session_path, :class => "btn btn-primary text-white nav-link text-light link-text"%>
           </li>

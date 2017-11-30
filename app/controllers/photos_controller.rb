@@ -1,14 +1,18 @@
 class PhotosController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-   @photos = Photo.order('created_at')
+    if current_user
+      @photos = current_user.photos
+    end
   end
 
   def new
-   @photo = Photo.new
+   @photo = current_user.photos.new
   end
 
   def create
-   @photo = Photo.new(photo_params)
+   @photo = current_user.photos.new(photo_params)
    if @photo.save
     flash[:notice] = "Successfully added new photo!"
     redirect_to root_path

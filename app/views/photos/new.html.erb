@@ -1,6 +1,6 @@
 <div class="page-header"><h1>Upload Photo</h1></div>
 
-<%= form_for @photo, html: { multipart: true } do |f| %>
+<%= form_for [current_user, @photo], html: { multipart: true } do |f| %>
   <% if @photo.errors.any? %>
     <div id="error_explanation">
       <h2>
